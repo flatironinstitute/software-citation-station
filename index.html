@@ -157,7 +157,7 @@
                 <div class="col-12 col-md-6">
                     <h2>Updating existing software</h2>
                     <p class="mb-1">Please use the button below to create a new GitHub issue on the Software Citation Station!</p>
-                    <a class="btn btn-primary mb-4" href="https://github.com/TomWagg/software-citation-station/issues/new?assignees=&labels=update-citation&projects=&template=02-update.md&title=" target="_blank">Update existing software</a>
+                    <a class="btn btn-primary mb-4" data-repo-path="issues/new?assignees=&labels=update-citation&projects=&template=02-update.md&title=" target="_blank">Update existing software</a>
                 </div>
             </div>
             <div class="row justify-content-center mt-2">
@@ -165,11 +165,11 @@
                     <h2>Can I link this tool in my documentation?</h2>
                     <div class="mb-2">
                         <p class="mb-0">Absolutely, in fact, we encourage it! You can even make a custom link so that your package is automatically selected - just add to the URL like this:</p>
-                        <a href="https://www.tomwagg.com/software-citation-station/?auto-select=PACKAGENAME">https://www.tomwagg.com/software-citation-station/<span class="text-decoration-underline">?auto-select=PACKAGENAME</span></a>
+                        <a data-site-path="?auto-select=PACKAGENAME"><span class="site-url"></span><span class="text-decoration-underline">?auto-select=PACKAGENAME</span></a>
                     </div>
                     <p class="mb-0">
                         Or, if you'd like it formatted in a nifty little badge like this one,
-                        <a href="https://www.tomwagg.com/software-citation-station/?auto-select=PACKAGENAME"> <img src="https://img.shields.io/badge/Cite-PACKAGENAME-blue" alt="GitHub badge" /> </a>, click <a href="#" id="cite-badge" class="btn btn-primary" style="font-size: 0.7rem; padding: 0.2rem">this button</a> to copy some HTML that does that!
+                        <a data-site-path="?auto-select=PACKAGENAME"> <img src="https://img.shields.io/badge/Cite-PACKAGENAME-blue" alt="GitHub badge" /> </a>, click <a href="#" id="cite-badge" class="btn btn-primary" style="font-size: 0.7rem; padding: 0.2rem">this button</a> to copy some HTML that does that!
                     </p>
                 </div>
             </div>
@@ -457,6 +457,7 @@
         </div>
 
         <div id="javascriptbox">
+            <script src="js/config.js"></script>
             <script src="js/software.js"></script>
         </div>
     </body>

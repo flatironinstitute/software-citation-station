@@ -6,6 +6,6 @@ Hi! Someone recently added a package to the Software Citation Station that depen
 
 The Software Citation Station is a simple web tool for quickly generating the necessary LaTeX/BibTeX to properly acknowledge the software used in research and ensure work is properly credited.
 
-- [Add your software with this form](https://www.tomwagg.com/software-citation-station/?new-software=true)
-- [Main website](https://www.tomwagg.com/software-citation-station/)
+- [Add your software with this form](https://flatironinstitute.github.io/software-citation-station/?new-software=true)
+- [Main website](https://flatironinstitute.github.io/software-citation-station/)
 - [Read more in our paper](https://arxiv.org/abs/2406.04405)

@@ -17,7 +17,7 @@ const base_issue_text = `# TODO before submitting
 # Citation information\n`
 
 // cite badge HTML
-const badge_html = `<a href="https://www.tomwagg.com/software-citation-station/?auto-select=PACKAGENAME">
+const badge_html = `<a href="${SITE_URL}?auto-select=PACKAGENAME">
     <img src="https://img.shields.io/badge/Cite-PACKAGENAME-blue" alt="GitHub badge" />
 </a>`
 
@@ -515,7 +515,7 @@ Promise.all([
                 ack.innerHTML += "\n\n";
             }
             ack.innerHTML += custom_acks_to_add.join("\n\n");
-            ack.innerHTML += "\n\n" + highlight_latex("Software citation information aggregated using \\texttt{\\href{https://www.tomwagg.com/software-citation-station/}{The Software Citation Station}} \\citep{software-citation-station-paper,software-citation-station-zenodo}.");
+            ack.innerHTML += "\n\n" + highlight_latex("Software citation information aggregated using \\texttt{\\href{" + SITE_URL + "}{The Software Citation Station}} \\citep{software-citation-station-paper,software-citation-station-zenodo}.");
 
             // add the bibtex entries
             bibs_to_add.push(highlight_bibtex(bibtex_table['software-citation-station-paper']))
@@ -776,7 +776,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById("copy-new-software").addEventListener('click', function() {
         navigator.clipboard.writeText(this.getAttribute("data-copy-text"));
-        const url = `https://github.com/TomWagg/software-citation-station/issues/new?assignees=&labels=new-citation&projects=&template=01-citation.md&title=[NEW SUBMISSION] ${name}`
+        const url = `${GITHUB_REPO_URL}issues/new?assignees=&labels=new-citation&projects=&template=01-citation.md&title=[NEW SUBMISSION] ${name}`
         window.open(url, "_blank");
     });
 
@@ -996,6 +996,17 @@ window.addEventListener('DOMContentLoaded', () => {
     if (params.has("new-software") && params.get("new-software") === "true") {
         document.getElementById("launch-new-software").click();
     }
+
+    // point links at the site and repository URLs set in js/config.js
+    document.querySelectorAll("[data-site-path]").forEach(function(link) {
+        link.href = SITE_URL + link.getAttribute("data-site-path");
+    });
+    document.querySelectorAll("[data-repo-path]").forEach(function(link) {
+        link.href = GITHUB_REPO_URL + link.getAttribute("data-repo-path");
+    });
+    document.querySelectorAll(".site-url").forEach(function(el) {
+        el.textContent = SITE_URL;
+    });
 
     // open headshot links on click
     document.querySelectorAll(".headshot-box").forEach(function(box) {
