@@ -358,8 +358,9 @@ pre {
 
 .headshot {
     border-radius: 100%;
-    max-width: 200px;
-    max-height: 200px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
     border: 10px solid var(--primary);
 }
 
@@ -474,7 +475,12 @@ body.dark .overlay {
     filter: brightness(0.8);
 }
 
-/* Flatiron Institute and Simons Foundation logos in the header */
+/* Flatiron Institute and Simons Foundation logos under the authors */
+#host-logos {
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
 .host-logo {
     height: 50px;
 }
