@@ -293,7 +293,7 @@ Promise.all([
                 // build feature sentence separately so it isn't folded into the comma-joined software list
                 if (selected_feature_data.length > 0) {
                     const feature_parts = selected_feature_data.map(f =>
-                        `\\texttt{${f.name}} \\citep{${f.tags.join(",")}}`
+                        `${f.name} \\citep{${f.tags.join(",")}}`
                     );
                     let feature_list;
                     if (feature_parts.length === 1) {
