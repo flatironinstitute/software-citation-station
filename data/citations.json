@@ -4498,5 +4498,40 @@
             "scipy",
             "scikit-learn"
         ]
+    },
+    "spike": {
+        "tags": [
+            "Polzin.2025"
+        ],
+        "logo": "img/spike.png",
+        "logo_background": "true",
+        "language": [
+            "Python"
+        ],
+        "category": [
+            "Cosmology",
+            "General",
+            "Imaging",
+            "Photometry",
+            "Stars",
+            "Transients"
+        ],
+        "keywords": [
+            "point spread functions",
+            "photometry",
+            "astronomy"
+        ],
+        "description": "All-in-one tool to generate, and correctly drizzle, space telescope point spread functions (current support for HST, JWST, and Roman).",
+        "link": "https://spike-psf.readthedocs.io/en/latest/",
+        "attribution_link": "https://spike-psf.readthedocs.io/en/latest/citation.html",
+        "zenodo_doi": "10.5281/zenodo.15791924",
+        "custom_citation": "",
+        "dependencies": [
+            "astropy",
+            "matplotlib",
+            "numpy",
+            "python",
+            "scipy"
+        ]
     }
 }
