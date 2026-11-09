@@ -358,8 +358,9 @@ pre {
 
 .headshot {
     border-radius: 100%;
-    max-width: 200px;
-    max-height: 200px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
     border: 10px solid var(--primary);
 }
 
@@ -472,4 +473,34 @@ body.dark .overlay {
 
 .dependency-toggle:hover {
     filter: brightness(0.8);
+}
+
+/* Flatiron Institute and Simons Foundation logos under the authors */
+#host-logos {
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.host-logo {
+    height: 50px;
+}
+
+@media (max-width: 767.98px) {
+    .host-logo {
+        height: 32px;
+    }
+}
+
+.host-logo.dark-only,
+body.dark .host-logo.light-only {
+    display: none;
+}
+
+body.dark .host-logo.dark-only {
+    display: inline;
+}
+
+/* there's no white Flatiron logo so recolour it to white in dark mode */
+body.dark .flatiron-logo {
+    filter: brightness(0) invert(1);
 }

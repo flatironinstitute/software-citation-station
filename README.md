@@ -7,11 +7,11 @@
 
 
 <p align="center">
-  <a href="https://www.tomwagg.com/software-citation-station/">Visit the software citation station</a>
+  <a href="https://flatironinstitute.github.io/software-citation-station/">Visit the software citation station</a>
   • 
-  <a href="https://www.tomwagg.com/software-citation-station/?new-software=true">Submit a new citation</a>
+  <a href="https://flatironinstitute.github.io/software-citation-station/?new-software=true">Submit a new citation</a>
   • 
-  <a href="https://raw.githubusercontent.com/TomWagg/software-citation-station/main/paper/paper.pdf">Read the paper</a>
+  <a href="https://raw.githubusercontent.com/flatironinstitute/software-citation-station/main/paper/paper.pdf">Read the paper</a>
 </p>
 
 <b>Why is it important to cite software?</b>

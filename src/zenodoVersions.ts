@@ -41,6 +41,13 @@ const MAX_PAGE_COUNT = 10;
 const RETRY_DELAYS_MS = [10_000, 30_000, 90_000] as const;
 const RETRYABLE_STATUS_CODES = new Set([408, 500, 502, 503, 504]);
 
+// Zenodo's traffic filter returns 403 for requests with Node's default User-Agent,
+// so identify ourselves explicitly
+const REQUEST_HEADERS = {
+  'User-Agent': 'software-citation-station (https://github.com/flatironinstitute/software-citation-station)',
+  'Accept': 'application/json'
+};
+
 function sleep(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -151,7 +158,7 @@ export async function getZenodoVersionInfo(conceptDoi: string): Promise<ZenodoVe
     let response: Response | undefined;
     for (let attemptIndex = 0; attemptIndex <= RETRY_DELAYS_MS.length; attemptIndex++) {
       try {
-        response = await fetch(url);
+        response = await fetch(url, { headers: REQUEST_HEADERS });
       } catch (error) {
         if (attemptIndex === RETRY_DELAYS_MS.length) {
           const message = error instanceof Error ? error.message : String(error);
