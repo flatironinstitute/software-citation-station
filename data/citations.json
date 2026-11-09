@@ -42,6 +42,123 @@
         ],
         "frequently_used": true
     },
+    "GNU Astronomy Utilities (Gnuastro)": {
+    "tags": [
+        "gnuastro"
+    ],
+    "logo": "img/gnuastro.svg",
+    "language": [
+        "C",
+        "Shell",
+        "Make"
+    ],
+    "category": [
+        "Data Handling",
+        "Imaging",
+        "Library",
+        "Multiprocessing",
+        "Photometry",
+        "Statistics",
+        "Visualisation"
+    ],
+    "keywords": [
+        "Optical image processing",
+        "Data reduction",
+        "Sky subtraction",
+        "Detection",
+        "Segmentation",
+        "Measurements (catalog generation)",
+        "Table processing",
+        "FITS files",
+        "Cosmological calculations",
+        "Visualization",
+        "Matching catalogs",
+        "Mock profiles",
+        "Querying database",
+        "Pointing patterns",
+        "Warping images"
+    ],
+    "description": "GNU Astronomy Utilities (Gnuastro) is an official GNU package consisting of various programs and library functions for the manipulation and analysis of (astronomical) data.",
+    "link": "https://www.gnu.org/software/gnuastro",
+    "attribution_link": "https://www.gnu.org/software/gnuastro/manual/html_node/Citing-Gnuastro.html",
+    "zenodo_doi": "10.5281/zenodo.3483064",
+    "custom_citation": "",
+    "dependencies": [],
+    "feature_tags": [
+        {
+            "astscript-psf-*": {
+                "tags": [
+                    "ExtendedPSF"
+                ],
+                "dependencies": []
+            }
+        },
+        {
+            "astscript-color-faint-gray": {
+                "tags": [
+                    "colorfaintgray"
+                ],
+                "dependencies": []
+            }
+        },
+        {
+            "Segment": {
+                "tags": [
+                    "Segment"
+                ],
+                "dependencies": []
+            }
+        },
+        {
+            "astscript-zeropoint": {
+                "tags": [
+                    "zeropoint"
+                ],
+                "dependencies": []
+            }
+        },
+        {
+            "astscript-radial-profile": {
+                "tags": [
+                    "radialprofile"
+                ],
+                "dependencies": []
+            }
+        },
+        {
+            "astscript-radial-profile --polar": {
+                "tags": [
+                    "polarplots"
+                ],
+                "dependencies": []
+            }
+        },
+        {
+            "MakeCatalog": {
+                "tags": [
+                    "MakeCatalog"
+                ],
+                "dependencies": []
+            }
+        },
+        {
+            "astscript-pointing-simulate": {
+                "tags": [
+                    "2023RNAAS...7..211A"
+                ],
+                "dependencies": []
+            }
+        },
+        {
+            "madclip-maskfilled and sigclip-maskfilled operators of Arithmetic": {
+                "tags": [
+                    "2026RNAAS..10..271A"
+                ],
+                "dependencies": []
+            }
+        }
+    ]
+},
     "matplotlib": {
         "tags": [
             "Hunter:2007"

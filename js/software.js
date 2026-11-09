@@ -351,7 +351,7 @@ Promise.all([
                             if (this.value !== "-") {
                                 fetch_zenodo_bibtex(this.value).then((bibtex) => {
                                     // replace bibtex tag using regular expression
-                                    bibtex = bibtex.replace(bibtex_re, "@software{" + btn.getAttribute("data-key") + "_" + this.value);
+                                    bibtex = bibtex.replace(bibtex_re, "@software{" + zenodo_bibtex_key(btn.getAttribute("data-key"), this.value));
                                     vp.setAttribute("data-bibtex", bibtex);
                                     btn.click();
                                     btn.click();
@@ -391,7 +391,7 @@ Promise.all([
                         // if you've selected a version then update the citation
                         if (version_picker.hasAttribute("data-bibtex")) {
                             const chosen_version = version_picker.querySelector(".version-select").value;
-                            const new_tag = btn.getAttribute("data-key") + "_" + chosen_version
+                            const new_tag = zenodo_bibtex_key(btn.getAttribute("data-key"), chosen_version);
                             if (new_ack.includes("\\citep{")) {
                                 // insert zenodo tag into the first \citep{} (the main software citation)
                                 const citep_idx = new_ack.indexOf("\\citep{");
@@ -1110,6 +1110,15 @@ function create_option(value, label) {
     opt.value = value;
     opt.innerText = label;
     return opt;
+}
+
+// build the BibTeX citation key for a chosen Zenodo version of a package. Package names
+// can contain characters that are illegal in BibTeX/biber keys (e.g. the spaces and
+// parentheses in "GNU Astronomy Utilities (Gnuastro)"), so strip those out. Only the
+// problematic characters are removed so that existing keys (e.g. "Athena++", "orbitize!")
+// are left unchanged.
+function zenodo_bibtex_key(package_name, version_doi) {
+    return (package_name + "_" + version_doi).replace(/[\s,{}()"#%'=\\~]/g, "");
 }
 
 // capitalise the first letter in each word in a string
