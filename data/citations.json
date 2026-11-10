@@ -4650,5 +4650,29 @@
             "python",
             "scipy"
         ]
+    },
+    "Geopandas": {
+        "tags": [
+            "fleischmann2026GeoPandas"
+        ],
+        "logo": "https://geopandas.org/en/stable/_static/geopandas_logo_web.svg",
+        "logo_background": true,
+        "language": [
+            "Python"
+        ],
+        "category": [
+            "Data Handling"
+        ],
+        "keywords": [],
+        "description": "Python tools for geographic data",
+        "link": "https://geopandas.org/",
+        "attribution_link": "https://geopandas.org/en/stable/about/citing.html",
+        "zenodo_doi": "10.5281/zenodo.2585848",
+        "custom_citation": "",
+        "dependencies": [
+            "numpy",
+            "pandas",
+            "python"
+        ]
     }
 }
