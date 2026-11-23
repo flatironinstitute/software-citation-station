@@ -4674,5 +4674,34 @@
             "pandas",
             "python"
         ]
+    },
+    "galstreams": {
+        "tags": [
+            "galstreams_mnras"
+        ],
+        "language": [
+            "Python"
+        ],
+        "category": [
+            "Galactic Dynamics"
+        ],
+        "keywords": [
+            "streams",
+            "Milky Way"
+        ],
+        "description": "A Library of Stellar Streams in the Milky Way",
+        "link": "https://github.com/cmateu/galstreams",
+        "attribution_link": "https://github.com/cmateu/galstreams",
+        "zenodo_doi": "",
+        "custom_citation": "",
+        "dependencies": [
+            "astropy",
+            "matplotlib",
+            "numpy",
+            "pandas",
+            "python",
+            "scipy",
+            "gala"
+        ]
     }
 }
